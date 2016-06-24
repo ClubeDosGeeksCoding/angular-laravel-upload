@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('imagens', "Imagens@lista");
+Route::post('imagens',"Imagens@nova");
+Route::delete('imagens/{id}',"Imagens@delete");
